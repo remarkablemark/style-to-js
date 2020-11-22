@@ -41,4 +41,19 @@ describe('camelCase', () => {
   ])('transforms "%s" to "%s"', (property, expected) => {
     expect(camelCase(property)).toBe(expected);
   });
+
+  describe('option `reactCompat`', () => {
+    const options = { reactCompat: true };
+
+    it.each([
+      ['-khtml-transition', 'KhtmlTransition'],
+      ['-o-transition', 'OTransition'],
+      ['-moz-user-select', 'MozUserSelect'],
+      ['-ms-user-select', 'MsUserSelect'],
+      ['-webkit-transition', 'WebkitTransition'],
+      ['-webkit-user-select', 'WebkitUserSelect'],
+    ])('capitalizes vendor prefix "%s" to "%s"', (property, expected) => {
+      expect(camelCase(property, options)).toBe(expected);
+    });
+  });
 });
