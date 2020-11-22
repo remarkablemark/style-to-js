@@ -23,14 +23,26 @@ const capitalize = (match: string, character: string) =>
 const trimHyphen = (match: string, prefix: string) => `${prefix}-`;
 
 /**
+ * CamelCase options.
+ */
+export interface CamelCaseOptions {
+  reactCompat?: boolean;
+}
+
+/**
  * CamelCases a CSS property.
  */
-export const camelCase = (property: string) => {
+export const camelCase = (property: string, options: CamelCaseOptions = {}) => {
   if (skipCamelCase(property)) {
     return property;
   }
 
   property = property.toLowerCase();
-  property = property.replace(VENDOR_PREFIX_REGEX, trimHyphen);
+
+  if (!options.reactCompat) {
+    // for non-React, remove first hyphen so vendor prefix is not capitalized
+    property = property.replace(VENDOR_PREFIX_REGEX, trimHyphen);
+  }
+
   return property.replace(HYPHEN_REGEX, capitalize);
 };
