@@ -1,7 +1,7 @@
 const CUSTOM_PROPERTY_REGEX = /^--[a-zA-Z0-9-]+$/;
 const HYPHEN_REGEX = /-([a-z])/g;
 const NO_HYPHEN_REGEX = /^[^-]+$/;
-const VENDOR_PREFIX_REGEX = /^-(webkit|moz|ms|o)-/;
+const VENDOR_PREFIX_REGEX = /^-(webkit|moz|ms|o|khtml)-/;
 
 /**
  * Checks whether to skip camelCase.
