@@ -58,3 +58,19 @@ it('parses style with no spaces to object', () => {
     'border-bottom-left-radius:1em;border-right-style:solid;Z-Index:-1;-moz-border-radius-bottomleft:20px';
   expect(styleToJS(style)).toMatchSnapshot();
 });
+
+describe('option `reactCompat`', () => {
+  const options = { reactCompat: true };
+
+  it('capitalizes vendor prefixes', () => {
+    const style = `
+      -khtml-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+    `;
+    expect(styleToJS(style, options)).toMatchSnapshot();
+  });
+});
