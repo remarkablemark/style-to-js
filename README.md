@@ -21,8 +21,8 @@ parse('background-color: #BADA55;');
 
 Output:
 
-```js
-{ 'backgroundColor': '#BADA55' }
+```json
+{ "backgroundColor": "#BADA55" }
 ```
 
 ## Install
@@ -50,7 +50,9 @@ $ yarn add style-to-js
 
 ## Usage
 
-Import module:
+### Import
+
+Import or require module:
 
 ```js
 // ES Modules
@@ -60,6 +62,8 @@ import parse from 'style-to-js';
 const parse = require('style-to-js').default;
 ```
 
+### Parse style
+
 Parse single declaration:
 
 ```js
@@ -68,9 +72,11 @@ parse('line-height: 42');
 
 Output:
 
-```js
-{ 'lineHeight': '42' }
+```json
+{ "lineHeight": "42" }
 ```
+
+> Notice that the CSS property is camelCased.
 
 Parse multiple declarations:
 
@@ -83,9 +89,52 @@ parse(`
 
 Output:
 
-```js
-{ 'borderColor': '#ACE', 'zIndex': '1337' }
+```json
+{
+  "borderColor": "#ACE",
+  "zIndex": "1337"
+}
 ```
+
+### Vendor prefix
+
+Parse [vendor prefix](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix):
+
+```js
+parse(`
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -ms-transition: all 4s ease;
+  -o-transition: all 4s ease;
+`);
+```
+
+Output:
+
+```json
+{
+  "webkitTransition": "all 4s ease",
+  "mozTransition": "all 4s ease",
+  "msTransition": "all 4s ease",
+  "oTransition": "all 4s ease"
+}
+```
+
+### Custom property
+
+Parse [custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/--*):
+
+```js
+parse('--custom-property: #f00');
+```
+
+Output:
+
+```json
+{ "--custom-property": "#f00" }
+```
+
+### Unknown declaration
 
 This library does not validate declarations, so unknown declarations can be parsed:
 
@@ -95,18 +144,30 @@ parse('the-answer: 42;');
 
 Output:
 
-```js
-{ 'theAnswer': '42' }
+```json
+{ "theAnswer": "42" }
 ```
 
-Invalid declarations/arguments:
+### Invalid declaration
+
+Declarations with missing value are removed:
 
 ```js
 parse(`
   margin-top: ;
   margin-right: 1em;
-`); // { marginRight: '1em' }
+`);
+```
 
+Output:
+
+```json
+{ "marginRight": "1em" }
+```
+
+Other invalid declarations or arguments:
+
+```js
 parse(); // {}
 parse(null); // {}
 parse(1); // {}
@@ -115,9 +176,13 @@ parse('top:'); // {}
 parse(':12px'); // {}
 parse(':'); // {}
 parse(';'); // {}
+```
 
-parse('top'); // throws Error
-parse('/*'); // throws Error
+The following values will throw an error:
+
+```js
+parse('top'); // Uncaught Error: property missing ':'
+parse('/*'); // Uncaught Error: End of comment missing
 ```
 
 ## Testing
