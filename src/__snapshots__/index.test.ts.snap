@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses background style to object 1`] = `
+Object {
+  "background": "url(data:image/png; base64,ivborw0kggoaaaansaaaabgdbtueaalgpc/xhbqaaaafzmuexurczmzpf399fx1+bm5mzy9avzxbesmgces5/p8/t9furvcrmu73jwlzosgsiizurcjo/ad+eqjjb4hv8bft+idpqocx1wjosbfhh2xssxeiyn3uli/6mnree07uiwjev8u8czwyuqdlkpg1bkb4nnm+veanfhqn1k4+gpt6ugqcvu2h2ovuif)",
+}
+`;
+
+exports[`parses common styles to object 1`] = `
+Object {
+  "color": "#f00",
+  "fontSize": "42px",
+  "zIndex": "-1",
+}
+`;
+
+exports[`parses style with no spaces to object 1`] = `
+Object {
+  "MozBorderRadiusBottomleft": "20px",
+  "borderBottomLeftRadius": "1em",
+  "borderRightStyle": "solid",
+  "zIndex": "-1",
+}
+`;
+
+exports[`parses style with vendor prefix to object 1`] = `
+Object {
+  "MozUserSelect": "none",
+  "MsUserSelect": "none",
+  "OTransition": "all .5s",
+  "WebkitTransition": "all .5s",
+  "WebkitUserSelect": "none",
+  "background": "linear-gradient(to bottom, white, black)",
+  "display": "grid",
+  "transition": "all .5s",
+  "userSelect": "none",
+}
+`;
