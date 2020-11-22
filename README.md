@@ -109,6 +109,7 @@ parse(`
   -moz-transition: all 4s ease;
   -ms-transition: all 4s ease;
   -o-transition: all 4s ease;
+  -khtml-transition: all 4s ease;
 `);
 ```
 
@@ -119,7 +120,8 @@ Output:
   "webkitTransition": "all 4s ease",
   "mozTransition": "all 4s ease",
   "msTransition": "all 4s ease",
-  "oTransition": "all 4s ease"
+  "oTransition": "all 4s ease",
+  "khtmlTransition": "all 4s ease"
 }
 ```
 
@@ -186,6 +188,43 @@ The following values will throw an error:
 ```js
 parse('top'); // Uncaught Error: property missing ':'
 parse('/*'); // Uncaught Error: End of comment missing
+```
+
+### Options
+
+#### reactCompat
+
+When option `reactCompat` is true, the [vendor prefix](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix) will be capitalized:
+
+```js
+parse(
+  `
+    -webkit-transition: all 4s ease;
+    -moz-transition: all 4s ease;
+    -ms-transition: all 4s ease;
+    -o-transition: all 4s ease;
+    -khtml-transition: all 4s ease;
+  `,
+  { reactCompat: true }
+);
+```
+
+Output:
+
+```json
+{
+  "WebkitTransition": "all 4s ease",
+  "MozTransition": "all 4s ease",
+  "MsTransition": "all 4s ease",
+  "OTransition": "all 4s ease",
+  "KhtmlTransition": "all 4s ease"
+}
+```
+
+This helps resolve the React warning:
+
+```
+Warning: Unsupported vendor-prefixed style property %s. Did you mean %s?%s", "oTransition", "OTransition"
 ```
 
 ## Testing
