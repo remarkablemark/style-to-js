@@ -16,6 +16,7 @@ StyleToJS(string)
 
 ```js
 import parse from 'style-to-js';
+
 parse('background-color: #BADA55;');
 ```
 
@@ -24,6 +25,8 @@ Output:
 ```json
 { "backgroundColor": "#BADA55" }
 ```
+
+[Repl.it](https://repl.it/@remarkablemark/style-to-js) | [JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/)
 
 ## Install
 
