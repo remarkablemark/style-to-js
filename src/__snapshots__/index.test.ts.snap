@@ -16,23 +16,23 @@ Object {
 
 exports[`parses style with no spaces to object 1`] = `
 Object {
-  "MozBorderRadiusBottomleft": "20px",
   "borderBottomLeftRadius": "1em",
   "borderRightStyle": "solid",
+  "mozBorderRadiusBottomleft": "20px",
   "zIndex": "-1",
 }
 `;
 
 exports[`parses style with vendor prefix to object 1`] = `
 Object {
-  "MozUserSelect": "none",
-  "MsUserSelect": "none",
-  "OTransition": "all .5s",
-  "WebkitTransition": "all .5s",
-  "WebkitUserSelect": "none",
   "background": "linear-gradient(to bottom, white, black)",
   "display": "grid",
+  "mozUserSelect": "none",
+  "msUserSelect": "none",
+  "oTransition": "all .5s",
   "transition": "all .5s",
   "userSelect": "none",
+  "webkitTransition": "all .5s",
+  "webkitUserSelect": "none",
 }
 `;
