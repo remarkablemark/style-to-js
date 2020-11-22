@@ -24,11 +24,12 @@ describe('camelCase', () => {
 
   // vendor prefix
   it.each([
-    ['-webkit-transition', 'webkitTransition'],
-    ['-o-transition', 'oTransition'],
-    ['-webkit-user-select', 'webkitUserSelect'],
+    ['-khtml-transition', 'khtmlTransition'],
     ['-moz-user-select', 'mozUserSelect'],
     ['-ms-user-select', 'msUserSelect'],
+    ['-o-transition', 'oTransition'],
+    ['-webkit-transition', 'webkitTransition'],
+    ['-webkit-user-select', 'webkitUserSelect'],
   ])('transforms vendor prefix "%s" to "%s"', (property, expected) => {
     expect(camelCase(property)).toBe(expected);
   });
