@@ -1,0 +1,23 @@
+<textarea cols="50" rows="5">
+background-color: #BADA55;
+line-height: 42;
+-webkit-transition: all 4s ease;
+--custom-property: #f00;
+</textarea>
+
+<pre><code></code></pre>
+
+<script src="../umd/style-to-js.min.js"></script>
+
+<script>
+  var code = document.querySelector('code');
+  var textarea = document.querySelector('textarea');
+
+  function render(event) {
+    var output = window.StyleToJS(event.target.value);
+    code.innerText = JSON.stringify(output, null, 2);
+  }
+
+  textarea.addEventListener('input', render);
+  render({ target: textarea });
+</script>
