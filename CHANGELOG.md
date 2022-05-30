@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/remarkablemark/style-to-js/compare/v1.1.0...v1.1.1) (2022-05-30)
+
+
+### Bug Fixes
+
+* don't capitalize -ms vendor prefix in reactCompat mode ([208926b](https://github.com/remarkablemark/style-to-js/commit/208926bb2df8e641367f08ed350df3bd1d44ffff)), closes [#2](https://github.com/remarkablemark/style-to-js/issues/2)
+
 ## [1.1.0](https://github.com/remarkablemark/style-to-js/compare/v1.0.0...v1.1.0) (2020-11-22)
 
 
