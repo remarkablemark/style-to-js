@@ -12,7 +12,7 @@ Parses CSS inline style to JavaScript object (camelCased):
 StyleToJS(string)
 ```
 
-#### Example
+## Example
 
 ```js
 import parse from 'style-to-js';
@@ -26,7 +26,7 @@ Output:
 { "backgroundColor": "#BADA55" }
 ```
 
-[Repl.it](https://repl.it/@remarkablemark/style-to-js) | [JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/)
+[Replit](https://replit.com/@remarkablemark/style-to-js) | [JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/)
 
 ## Install
 
@@ -255,12 +255,7 @@ $ npm run lint:fix
 
 ## Release
 
-Only collaborators with credentials can release and publish:
-
-```sh
-$ npm run release
-$ git push --follow-tags && npm publish
-```
+Release and publish are automated by [Release Please](https://github.com/googleapis/release-please).
 
 ## Special Thanks
 
