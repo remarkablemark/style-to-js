@@ -2,6 +2,7 @@ const CUSTOM_PROPERTY_REGEX = /^--[a-zA-Z0-9-]+$/;
 const HYPHEN_REGEX = /-([a-z])/g;
 const NO_HYPHEN_REGEX = /^[^-]+$/;
 const VENDOR_PREFIX_REGEX = /^-(webkit|moz|ms|o|khtml)-/;
+const MS_VENDOR_PREFIX_REGEX = /^-(ms)-/;
 
 /**
  * Checks whether to skip camelCase.
@@ -39,7 +40,10 @@ export const camelCase = (property: string, options: CamelCaseOptions = {}) => {
 
   property = property.toLowerCase();
 
-  if (!options.reactCompat) {
+  if (options.reactCompat) {
+    // `-ms` vendor prefix should not be capitalized
+    property = property.replace(MS_VENDOR_PREFIX_REGEX, trimHyphen);
+  } else {
     // for non-React, remove first hyphen so vendor prefix is not capitalized
     property = property.replace(VENDOR_PREFIX_REGEX, trimHyphen);
   }
