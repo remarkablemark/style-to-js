@@ -3,8 +3,8 @@
 [![NPM](https://nodei.co/npm/style-to-js.png)](https://nodei.co/npm/style-to-js/)
 
 [![NPM version](https://img.shields.io/npm/v/style-to-js.svg)](https://www.npmjs.com/package/style-to-js)
-[![Build Status](https://travis-ci.org/remarkablemark/style-to-js.svg?branch=master)](https://travis-ci.org/remarkablemark/style-to-js)
-[![Coverage Status](https://coveralls.io/repos/github/remarkablemark/style-to-js/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/style-to-js?branch=master)
+[![build](https://github.com/remarkablemark/style-to-js/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/style-to-js/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/remarkablemark/style-to-js/branch/master/graph/badge.svg?token=JWKUKTFT3E)](https://codecov.io/gh/remarkablemark/style-to-js)
 
 Parses CSS inline style to JavaScript object (camelCased):
 
