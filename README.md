@@ -34,13 +34,13 @@ Output:
 [NPM](https://www.npmjs.com/package/style-to-js):
 
 ```sh
-$ npm install style-to-js --save
+npm install style-to-js --save
 ```
 
 [Yarn](https://yarnpkg.com/package/style-to-js):
 
 ```sh
-$ yarn add style-to-js
+yarn add style-to-js
 ```
 
 [CDN](https://unpkg.com/style-to-js/):
@@ -216,13 +216,13 @@ Output:
 {
   "WebkitTransition": "all 4s ease",
   "MozTransition": "all 4s ease",
-  "MsTransition": "all 4s ease",
+  "msTransition": "all 4s ease",
   "OTransition": "all 4s ease",
   "KhtmlTransition": "all 4s ease"
 }
 ```
 
-This helps resolve the React warning:
+This removes the React warning:
 
 ```
 Warning: Unsupported vendor-prefixed style property %s. Did you mean %s?%s", "oTransition", "OTransition"
@@ -233,25 +233,25 @@ Warning: Unsupported vendor-prefixed style property %s. Did you mean %s?%s", "oT
 Run tests with coverage:
 
 ```sh
-$ npm test
+npm test
 ```
 
 Run tests in watch mode:
 
 ```sh
-$ npm run test:watch
+npm run test:watch
 ```
 
 Lint files:
 
 ```sh
-$ npm run lint
+npm run lint
 ```
 
 Fix lint errors:
 
 ```sh
-$ npm run lint:fix
+npm run lint:fix
 ```
 
 ## Release
