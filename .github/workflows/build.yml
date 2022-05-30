@@ -21,7 +21,7 @@ jobs:
         run: npm run lint
 
       - name: Run tests with coverage
-        run: npm test -- --ci --colors
+        run: npm test -- --ci
 
       - name: Build package
         run: npm run build

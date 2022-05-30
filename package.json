@@ -17,7 +17,7 @@
     "postinstall": "husky install",
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable && npm run lint && npm test && npm run clean && npm run build",
-    "test": "jest --coverage",
+    "test": "jest --coverage --colors",
     "test:watch": "jest --watch"
   },
   "repository": {
