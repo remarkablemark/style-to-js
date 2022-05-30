@@ -26,6 +26,7 @@ describe('camelCase', () => {
   it.each([
     ['-khtml-transition', 'khtmlTransition'],
     ['-moz-user-select', 'mozUserSelect'],
+    ['-ms-transform', 'msTransform'],
     ['-ms-user-select', 'msUserSelect'],
     ['-o-transition', 'oTransition'],
     ['-webkit-transition', 'webkitTransition'],
@@ -42,14 +43,15 @@ describe('camelCase', () => {
     expect(camelCase(property)).toBe(expected);
   });
 
-  describe('option `reactCompat`', () => {
+  describe('option reactCompat is true', () => {
     const options = { reactCompat: true };
 
     it.each([
       ['-khtml-transition', 'KhtmlTransition'],
       ['-o-transition', 'OTransition'],
       ['-moz-user-select', 'MozUserSelect'],
-      ['-ms-user-select', 'MsUserSelect'],
+      ['-ms-transform', 'msTransform'],
+      ['-ms-user-select', 'msUserSelect'],
       ['-webkit-transition', 'WebkitTransition'],
       ['-webkit-user-select', 'WebkitUserSelect'],
     ])('capitalizes vendor prefix "%s" to "%s"', (property, expected) => {
