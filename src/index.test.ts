@@ -27,7 +27,7 @@ it('parses common styles to object', () => {
     z-index: -1;
   `;
   expect(styleToJS(style)).toMatchInlineSnapshot(`
-    Object {
+    {
       "color": "#f00",
       "fontSize": "42px",
       "zIndex": "-1",
@@ -51,7 +51,7 @@ it('parses style with vendor prefix to object', () => {
     background: linear-gradient(to bottom, white, black);
   `;
   expect(styleToJS(style)).toMatchInlineSnapshot(`
-    Object {
+    {
       "background": "linear-gradient(to bottom, white, black)",
       "display": "grid",
       "mozUserSelect": "none",
@@ -69,7 +69,7 @@ it('parses background style to object', () => {
   const style =
     'background: url(data:image/png; base64,ivborw0kggoaaaansaaaabgdbtueaalgpc/xhbqaaaafzmuexurczmzpf399fx1+bm5mzy9avzxbesmgces5/p8/t9furvcrmu73jwlzosgsiizurcjo/ad+eqjjb4hv8bft+idpqocx1wjosbfhh2xssxeiyn3uli/6mnree07uiwjev8u8czwyuqdlkpg1bkb4nnm+veanfhqn1k4+gpt6ugqcvu2h2ovuif)';
   expect(styleToJS(style)).toMatchInlineSnapshot(`
-    Object {
+    {
       "background": "url(data:image/png; base64,ivborw0kggoaaaansaaaabgdbtueaalgpc/xhbqaaaafzmuexurczmzpf399fx1+bm5mzy9avzxbesmgces5/p8/t9furvcrmu73jwlzosgsiizurcjo/ad+eqjjb4hv8bft+idpqocx1wjosbfhh2xssxeiyn3uli/6mnree07uiwjev8u8czwyuqdlkpg1bkb4nnm+veanfhqn1k4+gpt6ugqcvu2h2ovuif)",
     }
   `);
@@ -79,7 +79,7 @@ it('parses style with no spaces to object', () => {
   const style =
     'border-bottom-left-radius:1em;border-right-style:solid;Z-Index:-1;-moz-border-radius-bottomleft:20px';
   expect(styleToJS(style)).toMatchInlineSnapshot(`
-    Object {
+    {
       "borderBottomLeftRadius": "1em",
       "borderRightStyle": "solid",
       "mozBorderRadiusBottomleft": "20px",
@@ -100,7 +100,7 @@ describe('when option reactCompat is true', () => {
       user-select: none;
     `;
     expect(styleToJS(style, options)).toMatchInlineSnapshot(`
-      Object {
+      {
         "KhtmlUserSelect": "none",
         "MozUserSelect": "-moz-none",
         "OUserSelect": "none",
@@ -116,7 +116,7 @@ describe('when option reactCompat is true', () => {
       -ms-user-select: none;
     `;
     expect(styleToJS(style, options)).toMatchInlineSnapshot(`
-      Object {
+      {
         "msTransform": "none",
         "msUserSelect": "none",
       }
