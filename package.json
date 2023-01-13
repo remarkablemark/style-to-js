@@ -39,7 +39,7 @@
     "style-to-object": "0.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.1",
+    "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
     "@rollup/plugin-commonjs": "24.0.0",
     "@rollup/plugin-node-resolve": "15.0.1",
