@@ -2,10 +2,11 @@
 
 [![NPM](https://nodei.co/npm/style-to-js.png)](https://nodei.co/npm/style-to-js/)
 
-[![NPM version](https://img.shields.io/npm/v/style-to-js.svg)](https://www.npmjs.com/package/style-to-js)
+[![NPM version](https://badgen.net/npm/v/style-to-js)](https://www.npmjs.com/package/style-to-js)
+[![Bundlephobia minified + gzip](https://badgen.net/bundlephobia/minzip/style-to-js)](https://bundlephobia.com/package/style-to-js)
 [![build](https://github.com/remarkablemark/style-to-js/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/style-to-js/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/style-to-js/branch/master/graph/badge.svg?token=JWKUKTFT3E)](https://codecov.io/gh/remarkablemark/style-to-js)
-[![NPM downloads](https://img.shields.io/npm/dm/style-to-js.svg?style=flat-square)](https://www.npmjs.com/package/style-to-js)
+[![NPM downloads](https://badgen.net/npm/dm/style-to-js)](https://www.npmjs.com/package/style-to-js)
 
 Parses CSS inline style to JavaScript object (camelCased):
 
