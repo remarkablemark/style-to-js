@@ -13,7 +13,7 @@ it.each([undefined, null, 0, 1, true, false, {}, [], () => {}, new Date()])(
   'parses "%s" to empty object',
   (text) => {
     expect(styleToJS(text as string)).toEqual({});
-  }
+  },
 );
 
 it.each(['top:', ':12px', ':', ';'])('parses "%s" to empty object', (text) => {

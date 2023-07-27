@@ -10,7 +10,7 @@ interface StyleToJSOptions extends CamelCaseOptions {}
  */
 export default function StyleToJS(
   style: string,
-  options?: StyleToJSOptions
+  options?: StyleToJSOptions,
 ): StyleObject {
   const output: StyleObject = {};
 
