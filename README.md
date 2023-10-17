@@ -28,7 +28,7 @@ Output:
 { "backgroundColor": "#BADA55" }
 ```
 
-[Replit](https://replit.com/@remarkablemark/style-to-js) | [JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/)
+[Replit](https://replit.com/@remarkablemark/style-to-js) | [JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/) | [Examples](https://github.com/remarkablemark/style-to-js/tree/master/examples)
 
 ## Install
 
@@ -57,13 +57,15 @@ yarn add style-to-js
 
 ### Import
 
-Import or require module:
+Import with ES Modules:
 
 ```js
-// ES Modules
 import parse from 'style-to-js';
+```
 
-// CommonJS
+Require with CommonJS:
+
+```js
 const parse = require('style-to-js').default;
 ```
 
