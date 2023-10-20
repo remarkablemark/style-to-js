@@ -36,7 +36,7 @@
     "pojo"
   ],
   "dependencies": {
-    "style-to-object": "1.0.1"
+    "style-to-object": "1.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "17.8.0",
