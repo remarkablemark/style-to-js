@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.8](https://github.com/remarkablemark/style-to-js/compare/v1.1.7...v1.1.8) (2023-10-20)
+
+
+### Miscellaneous Chores
+
+* release 1.1.8 ([c320c03](https://github.com/remarkablemark/style-to-js/commit/c320c036a69b2f686d55c8359d3182f7703768d0))
+
 ## [1.1.7](https://github.com/remarkablemark/style-to-js/compare/v1.1.6...v1.1.7) (2023-10-20)
 
 
