@@ -20,11 +20,11 @@ jobs:
       - name: Lint codebase
         run: npm run lint
 
-      - name: Run tests with coverage
-        run: npm test -- --ci
-
-      - name: Build package
-        run: npm run build
+      - name: Run unit tests
+        run: npm run test:ci
 
       - name: Codecov
         uses: codecov/codecov-action@v3
+
+      - name: Build package
+        run: npm run build
