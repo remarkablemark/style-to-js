@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "target": "es5",
     "module": "commonjs",
-    "removeComments": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true
   },
   "include": ["src"],
