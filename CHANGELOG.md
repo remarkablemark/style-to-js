@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.7](https://github.com/remarkablemark/style-to-js/compare/v1.1.6...v1.1.7) (2023-10-20)
+
+
+### Bug Fixes
+
+* **package:** bump style-to-object from 1.0.1 to 1.0.3 to fix UMD build ([203e976](https://github.com/remarkablemark/style-to-js/commit/203e97688ed45f49f6a6bb1b60cd27906c2340c1))
+
 ## [1.1.6](https://github.com/remarkablemark/style-to-js/compare/v1.1.5...v1.1.6) (2023-10-17)
 
 
