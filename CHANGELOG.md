@@ -4,45 +4,39 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.8](https://github.com/remarkablemark/style-to-js/compare/v1.1.7...v1.1.8) (2023-10-20)
 
+### Build System
 
-### Miscellaneous Chores
-
-* release 1.1.8 ([c320c03](https://github.com/remarkablemark/style-to-js/commit/c320c036a69b2f686d55c8359d3182f7703768d0))
+- **build:** generate sourceMap and include "src/" in package.json files ([#245](https://github.com/remarkablemark/style-to-js/issues/245)) ([a39c0b9](https://github.com/remarkablemark/style-to-js/commit/a39c0b9369ac8915943d8450feafc67da3a1806e))
 
 ## [1.1.7](https://github.com/remarkablemark/style-to-js/compare/v1.1.6...v1.1.7) (2023-10-20)
 
-
 ### Bug Fixes
 
-* **package:** bump style-to-object from 1.0.1 to 1.0.3 to fix UMD build ([203e976](https://github.com/remarkablemark/style-to-js/commit/203e97688ed45f49f6a6bb1b60cd27906c2340c1))
+- **package:** bump style-to-object from 1.0.1 to 1.0.3 to fix UMD build ([203e976](https://github.com/remarkablemark/style-to-js/commit/203e97688ed45f49f6a6bb1b60cd27906c2340c1))
 
 ## [1.1.6](https://github.com/remarkablemark/style-to-js/compare/v1.1.5...v1.1.6) (2023-10-17)
 
-
 ### Build System
 
-* **deps:** bump style-to-object from 1.0.0 to 1.0.1 ([#240](https://github.com/remarkablemark/style-to-js/issues/240)) ([1c9d816](https://github.com/remarkablemark/style-to-js/commit/1c9d816975373e28aadfb5a3c651ba3f6ad2ce37))
+- **deps:** bump style-to-object from 1.0.0 to 1.0.1 ([#240](https://github.com/remarkablemark/style-to-js/issues/240)) ([1c9d816](https://github.com/remarkablemark/style-to-js/commit/1c9d816975373e28aadfb5a3c651ba3f6ad2ce37))
 
 ## [1.1.5](https://github.com/remarkablemark/style-to-js/compare/v1.1.4...v1.1.5) (2023-10-17)
 
-
 ### Build System
 
-* **deps:** bump style-to-object from 0.4.2 to 1.0.0 ([#236](https://github.com/remarkablemark/style-to-js/issues/236)) ([1c2e90a](https://github.com/remarkablemark/style-to-js/commit/1c2e90a394d99e0b4133f4635a8e33220c55fe9b))
+- **deps:** bump style-to-object from 0.4.2 to 1.0.0 ([#236](https://github.com/remarkablemark/style-to-js/issues/236)) ([1c2e90a](https://github.com/remarkablemark/style-to-js/commit/1c2e90a394d99e0b4133f4635a8e33220c55fe9b))
 
 ## [1.1.4](https://github.com/remarkablemark/style-to-js/compare/v1.1.3...v1.1.4) (2023-08-31)
 
-
 ### Build System
 
-* **deps:** bump style-to-object from 0.4.1 to 0.4.2 ([#177](https://github.com/remarkablemark/style-to-js/issues/177)) ([d412537](https://github.com/remarkablemark/style-to-js/commit/d412537c87772b6a8f59d09c870e6443728ee156))
+- **deps:** bump style-to-object from 0.4.1 to 0.4.2 ([#177](https://github.com/remarkablemark/style-to-js/issues/177)) ([d412537](https://github.com/remarkablemark/style-to-js/commit/d412537c87772b6a8f59d09c870e6443728ee156))
 
 ## [1.1.3](https://github.com/remarkablemark/style-to-js/compare/v1.1.2...v1.1.3) (2023-01-16)
 
-
 ### Build System
 
-* **package:** bump style-to-object from 0.4.0 to 0.4.1 ([52f0442](https://github.com/remarkablemark/style-to-js/commit/52f04423d49c92f0c8a5c484d53679b93be7fd4b))
+- **package:** bump style-to-object from 0.4.0 to 0.4.1 ([52f0442](https://github.com/remarkablemark/style-to-js/commit/52f04423d49c92f0c8a5c484d53679b93be7fd4b))
 
 ## [1.1.2](https://github.com/remarkablemark/style-to-js/compare/v1.1.1...v1.1.2) (2022-12-25)
 
