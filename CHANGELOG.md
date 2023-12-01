@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.10](https://github.com/remarkablemark/style-to-js/compare/v1.1.9...v1.1.10) (2023-12-01)
+
+
+### Build System
+
+* **deps:** bump style-to-object from 1.0.4 to 1.0.5 ([#295](https://github.com/remarkablemark/style-to-js/issues/295)) ([98a8b87](https://github.com/remarkablemark/style-to-js/commit/98a8b87c37a24dbd2c7ee8356f1a2d65bab7dea0))
+
 ## [1.1.9](https://github.com/remarkablemark/style-to-js/compare/v1.1.8...v1.1.9) (2023-11-02)
 
 
