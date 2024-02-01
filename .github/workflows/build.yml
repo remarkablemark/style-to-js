@@ -24,7 +24,9 @@ jobs:
         run: npm run test:ci
 
       - name: Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Build package
         run: npm run build
