@@ -24,7 +24,7 @@ jobs:
         run: npm run test:ci
 
       - name: Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
 
       - name: Build package
         run: npm run build
