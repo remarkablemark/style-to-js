@@ -8,10 +8,7 @@ interface StyleToJSOptions extends CamelCaseOptions {}
 /**
  * Parses CSS inline style to JavaScript object (camelCased).
  */
-export default function StyleToJS(
-  style: string,
-  options?: StyleToJSOptions,
-): StyleObject {
+function StyleToJS(style: string, options?: StyleToJSOptions): StyleObject {
   const output: StyleObject = {};
 
   if (!style || typeof style !== 'string') {
@@ -27,3 +24,7 @@ export default function StyleToJS(
 
   return output;
 }
+
+StyleToJS.default = StyleToJS;
+
+export = StyleToJS;
