@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.11](https://github.com/remarkablemark/style-to-js/compare/v1.1.10...v1.1.11) (2024-03-19)
+
+
+### Bug Fixes
+
+* make exports work as documented ([448efa2](https://github.com/remarkablemark/style-to-js/commit/448efa23f12ac9baa6e9d4bb5f15009e6481b018))
+
 ## [1.1.10](https://github.com/remarkablemark/style-to-js/compare/v1.1.9...v1.1.10) (2023-12-01)
 
 
