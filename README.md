@@ -66,7 +66,7 @@ import parse from 'style-to-js';
 Require with CommonJS:
 
 ```js
-const parse = require('style-to-js').default;
+const parse = require('style-to-js');
 ```
 
 ### Parse style
@@ -209,7 +209,7 @@ parse(
     -o-transition: all 4s ease;
     -khtml-transition: all 4s ease;
   `,
-  { reactCompat: true }
+  { reactCompat: true },
 );
 ```
 
