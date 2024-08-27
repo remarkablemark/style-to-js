@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.13](https://github.com/remarkablemark/style-to-js/compare/v1.1.12...v1.1.13) (2024-08-27)
+
+
+### Continuous Integration
+
+* **github:** publish package to npm registry with provenance ([7441aa0](https://github.com/remarkablemark/style-to-js/commit/7441aa00a6f653bfea5e31ee11a0142989ed796d))
+
 ## [1.1.12](https://github.com/remarkablemark/style-to-js/compare/v1.1.11...v1.1.12) (2024-03-27)
 
 
