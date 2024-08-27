@@ -1,13 +1,15 @@
-name: build
+name: commitlint
 on: [push, pull_request]
 
 jobs:
-  build:
+  commitlint:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -18,16 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline
 
-      - name: Lint codebase
-        run: npm run lint
-
-      - name: Run unit tests
-        run: npm run test:ci
-
-      - name: Codecov
-        uses: codecov/codecov-action@v4
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Build package
-        run: npm run build
+      - name: Lint commit message
+        run: npx commitlint --from=HEAD~1
