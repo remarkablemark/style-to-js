@@ -1,4 +1,5 @@
 import StyleToObject from 'style-to-object';
+
 import { camelCase, CamelCaseOptions } from './utilities';
 
 type StyleObject = Record<string, string>;
