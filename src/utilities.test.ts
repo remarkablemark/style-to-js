@@ -18,6 +18,7 @@ describe('camelCase', () => {
     ['--fooBar', '--fooBar'],
     ['--foo-bar', '--foo-bar'],
     ['--foo-100', '--foo-100'],
+    ['--test_ing', '--test_ing'],
   ])('does not transform custom property "%s"', (property, expected) => {
     expect(camelCase(property)).toBe(expected);
   });
