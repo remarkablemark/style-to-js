@@ -1,4 +1,4 @@
-const CUSTOM_PROPERTY_REGEX = /^--[a-zA-Z0-9-]+$/;
+const CUSTOM_PROPERTY_REGEX = /^--[a-zA-Z0-9_-]+$/;
 const HYPHEN_REGEX = /-([a-z])/g;
 const NO_HYPHEN_REGEX = /^[^-]+$/;
 const VENDOR_PREFIX_REGEX = /^-(webkit|moz|ms|o|khtml)-/;
