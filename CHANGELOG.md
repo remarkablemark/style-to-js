@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.16](https://github.com/remarkablemark/style-to-js/compare/v1.1.15...v1.1.16) (2024-10-06)
+
+
+### Bug Fixes
+
+* handle underscore for css custom property regex ([#503](https://github.com/remarkablemark/style-to-js/issues/503)) ([c35e55a](https://github.com/remarkablemark/style-to-js/commit/c35e55a405ef7f1e114e6c85d7e357bb431fd27d))
+
 ## [1.1.15](https://github.com/remarkablemark/style-to-js/compare/v1.1.14...v1.1.15) (2024-10-03)
 
 
