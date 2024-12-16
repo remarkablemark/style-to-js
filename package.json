@@ -37,7 +37,7 @@
     "style-to-object": "1.0.8"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.0",
+    "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@eslint/compat": "1.2.4",
     "@eslint/eslintrc": "3.2.0",
