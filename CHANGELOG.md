@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.20](https://github.com/remarkablemark/style-to-js/compare/v1.1.19...v1.1.20) (2025-11-16)
+
+
+### Documentation
+
+* **readme:** replace badgen.net with shields.io status badges ([bd3919b](https://github.com/remarkablemark/style-to-js/commit/bd3919bddcd50221173df190498716fd4e77d02a))
+
 ## [1.1.19](https://github.com/remarkablemark/style-to-js/compare/v1.1.18...v1.1.19) (2025-11-03)
 
 
