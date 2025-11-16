@@ -2,11 +2,11 @@
 
 [![NPM](https://nodei.co/npm/style-to-js.png)](https://nodei.co/npm/style-to-js/)
 
-[![NPM version](https://badgen.net/npm/v/style-to-js)](https://www.npmjs.com/package/style-to-js)
-[![Bundlephobia minified + gzip](https://badgen.net/bundlephobia/minzip/style-to-js)](https://bundlephobia.com/package/style-to-js)
+[![NPM version](https://img.shields.io/npm/v/style-to-js)](https://www.npmjs.com/package/style-to-js)
+[![BNPM bundle size](https://img.shields.io/bundlephobia/minzip/style-to-js)](https://bundlephobia.com/package/style-to-js)
 [![build](https://github.com/remarkablemark/style-to-js/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/style-to-js/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/style-to-js/branch/master/graph/badge.svg?token=JWKUKTFT3E)](https://codecov.io/gh/remarkablemark/style-to-js)
-[![NPM downloads](https://badgen.net/npm/dm/style-to-js)](https://www.npmjs.com/package/style-to-js)
+[![NPM downloads](https://img.shields.io/npm/dm/style-to-js)](https://www.npmjs.com/package/style-to-js)
 
 Parses CSS inline style to JavaScript object (camelCased):
 
@@ -28,7 +28,7 @@ Output:
 { "backgroundColor": "#BADA55" }
 ```
 
-[Replit](https://replit.com/@remarkablemark/style-to-js) | [JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/) | [Examples](https://github.com/remarkablemark/style-to-js/tree/master/examples)
+[JSFiddle](https://jsfiddle.net/remarkablemark/04nob1y7/) | [Examples](https://github.com/remarkablemark/style-to-js/tree/master/examples)
 
 ## Install
 
@@ -83,6 +83,7 @@ Output:
 { "lineHeight": "42" }
 ```
 
+> [!NOTE]
 > Notice that the CSS property is camelCased.
 
 Parse multiple declarations:
