@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "allowJs": true,
+    "module": "nodenext",
     "noEmit": true,
     "rootDir": ".",
     "skipLibCheck": true
@@ -10,7 +11,7 @@
     "src/**/*.ts",
     "src/**/*.test.ts",
     "*.config.ts",
-    "eslint.config.mjs"
+    "eslint.config.mts"
   ],
   "exclude": []
 }
