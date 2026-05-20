@@ -21,9 +21,9 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
     "prepublishOnly": "npm run lint && npm run lint:tsc && npm run test:ci && npm run clean && npm run build",
-    "test": "jest",
-    "test:ci": "CI=true jest --ci --colors --coverage",
-    "test:watch": "jest --watch"
+    "test": "jest --detectOpenHandles",
+    "test:ci": "CI=true npm test -- --ci --colors --coverage",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
