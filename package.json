@@ -2,13 +2,33 @@
   "name": "style-to-js",
   "version": "1.1.21",
   "description": "Parses CSS inline style to JavaScript object (camelCased).",
+  "keywords": [
+    "css",
+    "javascript",
+    "object",
+    "pojo",
+    "style",
+    "style-to-js"
+  ],
+  "bugs": {
+    "url": "https://github.com/remarkablemark/style-to-js/issues"
+  },
+  "license": "MIT",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "cjs/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remarkablemark/style-to-js.git"
+  },
+  "files": [
+    "dist/",
+    "umd/"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "npm run build:cjs && npm run build:umd",
-    "build:cjs": "tsc --declaration --outDir cjs",
-    "build:umd": "rollup --config --failAfterWarnings",
-    "clean": "rm -rf cjs umd",
+    "build": "tsdown",
+    "clean": "rm -rf dist umd",
     "lint": "eslint .",
     "lint:tsc": "tsc --noEmit",
     "lint:fix": "npm run lint -- --fix",
@@ -18,21 +38,6 @@
     "test:ci": "CI=true jest --ci --colors --coverage",
     "test:watch": "jest --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/remarkablemark/style-to-js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/remarkablemark/style-to-js/issues"
-  },
-  "keywords": [
-    "style-to-js",
-    "css",
-    "style",
-    "javascript",
-    "object",
-    "pojo"
-  ],
   "dependencies": {
     "style-to-object": "1.0.14"
   },
@@ -42,9 +47,6 @@
     "@eslint/compat": "2.1.0",
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
-    "@rollup/plugin-commonjs": "29.0.2",
-    "@rollup/plugin-node-resolve": "16.0.3",
-    "@rollup/plugin-terser": "1.0.0",
     "@types/jest": "30.0.0",
     "@typescript-eslint/eslint-plugin": "8.59.4",
     "@typescript-eslint/parser": "8.59.4",
@@ -56,15 +58,16 @@
     "jest": "30.4.2",
     "lint-staged": "17.0.5",
     "prettier": "3.8.3",
-    "rollup": "4.60.4",
     "ts-jest": "29.4.10",
     "ts-node": "10.9.2",
+    "tsdown": "^0.22.0",
     "typescript": "6.0.3"
   },
-  "files": [
-    "cjs/",
-    "src/",
-    "umd/"
-  ],
-  "license": "MIT"
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  }
 }

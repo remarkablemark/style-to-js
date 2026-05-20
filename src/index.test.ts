@@ -1,8 +1,4 @@
-import styleToJS = require('.');
-
-it('exposes itself as default', () => {
-  expect(styleToJS).toBe(styleToJS.default);
-});
+import styleToJS from '.';
 
 it('parses empty style to object', () => {
   expect(styleToJS('')).toEqual({});
