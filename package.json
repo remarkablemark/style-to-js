@@ -44,6 +44,7 @@
     "style-to-object": "1.0.14"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.2",
     "@commitlint/cli": "21.0.1",
     "@commitlint/config-conventional": "21.0.1",
     "@eslint/js": "10.0.1",
@@ -60,8 +61,8 @@
     "ts-jest": "29.4.10",
     "ts-node": "10.9.2",
     "tsdown": "0.22.0",
-    "typescript-eslint": "8.59.4",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.59.4"
   },
   "files": [
     "dist/",
