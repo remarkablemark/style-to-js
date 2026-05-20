@@ -46,13 +46,10 @@
   "devDependencies": {
     "@commitlint/cli": "21.0.1",
     "@commitlint/config-conventional": "21.0.1",
-    "@eslint/compat": "2.1.0",
-    "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@types/jest": "30.0.0",
-    "@typescript-eslint/eslint-plugin": "8.59.4",
-    "@typescript-eslint/parser": "8.59.4",
     "eslint": "10.4.0",
+    "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-simple-import-sort": "13.0.0",
     "globals": "17.6.0",
@@ -62,7 +59,8 @@
     "prettier": "3.8.3",
     "ts-jest": "29.4.10",
     "ts-node": "10.9.2",
-    "tsdown": "^0.22.0",
+    "tsdown": "0.22.0",
+    "typescript-eslint": "8.59.4",
     "typescript": "6.0.3"
   },
   "files": [

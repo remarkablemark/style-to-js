@@ -4,7 +4,7 @@ import { camelCase, CamelCaseOptions } from './utilities';
 
 type StyleObject = Record<string, string>;
 
-interface StyleToJSOptions extends CamelCaseOptions {}
+type StyleToJSOptions = CamelCaseOptions;
 
 /**
  * Parses CSS inline style to JavaScript object (camelCased).

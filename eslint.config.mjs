@@ -1,57 +1,39 @@
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { includeIgnoreFile } from '@eslint/compat';
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import prettier from 'eslint-plugin-prettier';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const gitignorePath = path.resolve(__dirname, '.gitignore');
+const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
+export default defineConfig(
   includeIgnoreFile(gitignorePath),
-
-  ...compat.extends(
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-  ),
+  js.configs.recommended,
+  tseslint.configs.recommended,
+  eslintPluginPrettierRecommended,
 
   {
-    files: ['**/*.js', '**/*.mjs', '**/*.ts', '**/*.tsx'],
+    files: ['**/*.{cjs,cts,js,jsx,mjs,mts,ts,tsx}'],
 
     plugins: {
-      '@typescript-eslint': typescriptEslint,
       'simple-import-sort': simpleImportSort,
-      prettier,
     },
 
     languageOptions: {
       globals: {
-        ...globals.browser,
         ...globals.jest,
         ...globals.node,
       },
-      parser: tsParser,
     },
 
     rules: {
       'no-console': 'error',
       'no-debugger': 'error',
-      'prettier/prettier': 'error',
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
     },
   },
-];
+);
