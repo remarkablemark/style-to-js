@@ -1,10 +1,10 @@
-name: build
+name: lint
 on: [push, pull_request]
 
 permissions: read-all
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,17 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline
 
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run lint:tsc
+
       - name: Build package
         run: npm run build
+
+      - name: Lint package
+        run: npm run lint:package
+
+      - name: Check types
+        run: npm run lint:types

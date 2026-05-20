@@ -1,16 +1,18 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "types": ["jest"],
-    "esModuleInterop": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "rootDir": "src"
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+    "allowJs": true,
+    "module": "nodenext",
+    "noEmit": true,
+    "rootDir": ".",
+    "skipLibCheck": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.test.ts",
+    "*.config.ts",
+    "eslint.config.mts"
+  ],
+  "exclude": []
 }

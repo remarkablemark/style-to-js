@@ -10,15 +10,16 @@
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
-    },
-    "./package.json": "./package.json"
+    }
   },
   "scripts": {
     "build": "tsdown",
     "clean": "rm -rf dist umd",
     "lint": "eslint .",
-    "lint:tsc": "tsc --noEmit",
     "lint:fix": "npm run lint -- --fix",
+    "lint:package": "publint",
+    "lint:tsc": "tsc --noEmit",
+    "lint:types": "npx @arethetypeswrong/cli --pack",
     "prepare": "husky",
     "prepublishOnly": "npm run lint && npm run lint:tsc && npm run test:ci && npm run clean && npm run build",
     "test": "jest --detectOpenHandles",
@@ -44,15 +45,13 @@
     "style-to-object": "1.0.14"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.2",
     "@commitlint/cli": "21.0.1",
     "@commitlint/config-conventional": "21.0.1",
-    "@eslint/compat": "2.1.0",
-    "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@types/jest": "30.0.0",
-    "@typescript-eslint/eslint-plugin": "8.59.4",
-    "@typescript-eslint/parser": "8.59.4",
     "eslint": "10.4.0",
+    "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-simple-import-sort": "13.0.0",
     "globals": "17.6.0",
@@ -60,10 +59,12 @@
     "jest": "30.4.2",
     "lint-staged": "17.0.5",
     "prettier": "3.8.3",
+    "publint": "0.3.21",
     "ts-jest": "29.4.10",
     "ts-node": "10.9.2",
-    "tsdown": "^0.22.0",
-    "typescript": "6.0.3"
+    "tsdown": "0.22.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.59.4"
   },
   "files": [
     "dist/",

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.build.tsbuildinfo",
+    "target": "es6",
+    "module": "commonjs",
+    "types": ["jest"],
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "rootDir": "src"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+}

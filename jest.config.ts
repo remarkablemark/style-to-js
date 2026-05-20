@@ -11,6 +11,9 @@ const config: Config = {
     },
   },
   preset: 'ts-jest',
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.build.json' }],
+  },
 };
 
 export default config;
