@@ -31,7 +31,7 @@ export default defineConfig(
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
-        project: ['./tsconfig.test.json'],
+        project: ['./tsconfig.json'],
       },
       globals: {
         ...globals.jest,
