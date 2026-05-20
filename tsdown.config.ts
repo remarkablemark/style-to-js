@@ -19,7 +19,9 @@ export default defineConfig([
     target: 'es2023',
     entry: ['src/index.ts'],
     platform: 'neutral',
-    exports: true,
+    exports: {
+      packageJson: false,
+    },
   },
   {
     entry: {
