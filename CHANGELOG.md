@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/remarkablemark/style-to-js/compare/v1.1.21...v2.0.0) (2026-05-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tsconfig:** change build target from `es5` to `es6`
+
+### Features
+
+* build esm ([#904](https://github.com/remarkablemark/style-to-js/issues/904)) ([28ecab8](https://github.com/remarkablemark/style-to-js/commit/28ecab814a67fdd1b64577fc5f53dd14ca875c39)), closes [#900](https://github.com/remarkablemark/style-to-js/issues/900)
+
+
+### Build System
+
+* **tsconfig:** change target from es5 to es6 ([1e25f9c](https://github.com/remarkablemark/style-to-js/commit/1e25f9cdd0ff207b2b6c7d79b19c02200e71ea82))
+
 ## [1.1.21](https://github.com/remarkablemark/style-to-js/compare/v1.1.20...v1.1.21) (2025-11-16)
 
 
