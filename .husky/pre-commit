@@ -1,4 +1,5 @@
 npm run test:ci
 npm run build
 npm run lint:types
+npm run lint:package
 npx lint-staged
