@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.2](https://github.com/remarkablemark/style-to-js/compare/v2.0.1...v2.0.2) (2026-07-07)
+
+
+### Bug Fixes
+
+* **build:** bundle `style-to-object` in UMD output ([#939](https://github.com/remarkablemark/style-to-js/issues/939)) ([d2551d5](https://github.com/remarkablemark/style-to-js/commit/d2551d52c6250e0e65940ac499b405ec3b3a0dde))
+
+
+### Build System
+
+* **deps:** bump style-to-object from 2.0.0 to 2.0.2 ([#936](https://github.com/remarkablemark/style-to-js/issues/936)) ([48142f4](https://github.com/remarkablemark/style-to-js/commit/48142f47fd55c4dc251143837dc1b4dfd1228534))
+
 ## [2.0.1](https://github.com/remarkablemark/style-to-js/compare/v2.0.0...v2.0.1) (2026-06-19)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "style-to-js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Parses CSS inline style to JavaScript object (camelCased).",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "./dist/index.js",
