@@ -42,7 +42,7 @@
     "style-to-js"
   ],
   "dependencies": {
-    "style-to-object": "2.0.0"
+    "style-to-object": "2.0.2"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.4",
