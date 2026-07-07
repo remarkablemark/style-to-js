@@ -1,39 +1,56 @@
 import { defineConfig, type UserConfig } from 'tsdown';
 
-const baseUmdOptions = {
-  format: 'umd',
+const entry = 'src/index.ts';
+const sourcemap = true;
+const external = ['style-to-object'];
+
+const baseConfig = {
+  entry,
+  sourcemap,
+  target: 'es2023',
+  platform: 'neutral',
+  exports: {
+    packageJson: false,
+    inlinedDependencies: false,
+  },
+  deps: {
+    neverBundle: external,
+  },
+} satisfies UserConfig;
+
+const umdBase = {
+  ...baseConfig,
+  format: 'umd' as const,
   outDir: 'umd',
   globalName: 'StyleToJS',
-  target: 'es2023',
-  outputOptions: {
-    globals: {
-      'style-to-object': 'StyleToObject',
-    },
-    entryFileNames: '[name].js',
+  deps: {
+    alwaysBundle: external,
   },
 } satisfies UserConfig;
 
 export default defineConfig([
+  // ESM and CJS build
   {
+    ...baseConfig,
     format: ['esm', 'cjs'],
-    target: 'es2023',
-    entry: ['src/index.ts'],
-    platform: 'neutral',
-    exports: {
-      packageJson: false,
+    outDir: 'dist',
+    dts: true,
+  },
+
+  // UMD build (unminified)
+  {
+    ...umdBase,
+    outputOptions: {
+      entryFileNames: 'style-to-js.js',
     },
   },
+
+  // UMD build (minified)
   {
-    entry: {
-      'style-to-js': 'src/index.ts',
-    },
-    ...baseUmdOptions,
-  },
-  {
-    entry: {
-      'style-to-js.min': 'src/index.ts',
-    },
+    ...umdBase,
     minify: true,
-    ...baseUmdOptions,
+    outputOptions: {
+      entryFileNames: 'style-to-js.min.js',
+    },
   },
 ]);
