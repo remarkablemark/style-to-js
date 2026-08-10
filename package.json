@@ -59,7 +59,7 @@
     "jest": "30.4.2",
     "lint-staged": "17.3.0",
     "prettier": "3.9.6",
-    "publint": "0.3.22",
+    "publint": "0.3.23",
     "ts-jest": "29.4.12",
     "ts-node": "10.9.2",
     "tsdown": "0.22.14",
