@@ -46,8 +46,8 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "0.18.5",
-    "@commitlint/cli": "21.2.2",
-    "@commitlint/config-conventional": "21.2.2",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
     "@eslint/js": "10.0.1",
     "@types/jest": "30.0.0",
     "eslint": "10.11.0",
